@@ -6,7 +6,7 @@
     "node": true
   },
   "rules": {
-    "semi": "off",
+    "no-trailing-spaces": "off",
     "arrow-parens": "off",
     "comma-dangle": "off",
     "require-jsdoc": "off",
