@@ -8,7 +8,7 @@
 
   & .row {
     display: flex;
-    max-height: 20px;
+    min-height: 24px;
     height: $row-height;
   }
 
