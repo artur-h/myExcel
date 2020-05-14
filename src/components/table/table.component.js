@@ -15,7 +15,6 @@ function toColumn(col, index) {
       ${col}
       <div class="col-resize" data-resize="col"></div>
     </div>
-    
   `;
 }
 
