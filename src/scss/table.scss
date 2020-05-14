@@ -78,7 +78,7 @@
     width: 4px;
 
     &:hover {
-      cursor: col-resize;
+      cursor: ew-resize;
     }
   }
 
@@ -87,7 +87,7 @@
     height: 4px;
 
     &:hover {
-      cursor: row-resize;
+      cursor: ns-resize;
     }
   }
 }
