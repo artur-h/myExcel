@@ -13,6 +13,14 @@ class Dom {
     return this.$el.outerHTML.trim();
   }
 
+  text(text) {
+    if (typeof text === 'string') {
+      this.$el.textContent = text;
+      return this;
+    }
+    return this.$el.textContent.trim();
+  }
+
   clear() {
     this.html('');
     return this;
@@ -75,6 +83,11 @@ class Dom {
       };
     }
     return this.data.id;
+  }
+
+  focus() {
+    this.$el.focus();
+    return this;
   }
 
   addClass(className) {
