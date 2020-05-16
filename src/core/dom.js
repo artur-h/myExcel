@@ -18,6 +18,9 @@ class Dom {
       this.$el.textContent = text;
       return this;
     }
+    if (this.$el.tagName.toUpperCase() === 'input') {
+      return this.$el.value.trim();
+    }
     return this.$el.textContent.trim();
   }
 
@@ -92,10 +95,12 @@ class Dom {
 
   addClass(className) {
     this.$el.classList.add(className);
+    return this;
   }
 
   removeClass(className) {
     this.$el.classList.remove(className);
+    return this;
   }
 }
 
