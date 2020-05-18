@@ -3,7 +3,7 @@ import {Header} from '@/components/header/Header';
 import {Toolbar} from '@/components/toolbar/Toolbar';
 import {Formula} from '@/components/formula/Formula';
 import {Table} from '@/components/table/Table';
-import {CreateStore} from '@core/createStore';
+import {CreateStore} from '@core/CreateStore';
 import {rootReducer} from '@/redux/rootReducer';
 import {storage} from '@core/utils';
 import {initialState} from '@/redux/initialState';
