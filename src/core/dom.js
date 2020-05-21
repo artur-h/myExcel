@@ -14,14 +14,22 @@ class Dom {
   }
 
   text(text) {
-    if (typeof text === 'string') {
+    if (text || text === '') {
       this.$el.textContent = text;
       return this;
     }
-    if (this.$el.tagName.toUpperCase() === 'input') {
+    if (this.$el.tagName.toLowerCase() === 'input') {
       return this.$el.value.trim();
     }
     return this.$el.textContent.trim();
+  }
+
+  attr(name, value) {
+    if (typeof value === 'string') {
+      this.$el.setAttribute(name, value);
+      return this;
+    }
+    return this.$el.getAttribute(name);
   }
 
   clear() {
@@ -75,6 +83,13 @@ class Dom {
     Object
         .keys(styles)
         .forEach(key => this.$el.style[key] = styles[key]);
+  }
+
+  getStyles(styles) {
+    return styles.reduce((res, s) => {
+      res[s] = this.$el.style[s];
+      return res;
+    }, {});
   }
 
   id(parse) {
