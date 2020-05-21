@@ -14,7 +14,7 @@ class Dom {
   }
 
   text(text) {
-    if (typeof text === 'string') {
+    if (text || text === '') {
       this.$el.textContent = text;
       return this;
     }
@@ -22,6 +22,14 @@ class Dom {
       return this.$el.value.trim();
     }
     return this.$el.textContent.trim();
+  }
+
+  attr(name, value) {
+    if (typeof value === 'string') {
+      this.$el.setAttribute(name, value);
+      return this;
+    }
+    return this.$el.getAttribute(name);
   }
 
   clear() {
