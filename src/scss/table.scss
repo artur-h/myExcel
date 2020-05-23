@@ -29,6 +29,7 @@
   }
 
   & .column {
+    flex-shrink: 0;
     position: relative;
     display: flex;
     justify-content: center;
@@ -43,6 +44,7 @@
   }
 
   & .cell {
+    flex-shrink: 0;
     min-width: 40px;
     padding: 5px;
     width: $cell-width;

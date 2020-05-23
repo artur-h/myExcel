@@ -1,5 +1,10 @@
 import {$} from '@core/dom';
 
+// missing forEach on NodeList for IE11
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = Array.prototype.forEach;
+}
+
 export function resizeHandler($root, event) {
   return new Promise(resolve => {
     const $resizer = $(event.target);
