@@ -111,6 +111,9 @@ export class Table extends ExcelComponent {
   }
 
   onInput(event) {
-    this.updateTextInStore($(event.target).text());
+    const $target = $(event.target);
+
+    $target.data.value = $target.text();
+    this.updateTextInStore($target.text());
   }
 }

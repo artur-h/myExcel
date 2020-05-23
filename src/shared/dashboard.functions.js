@@ -35,7 +35,7 @@ export function createRecordsTable() {
   const keys = getAllKeys();
 
   if (!keys.length) {
-    return `<p>Create New Table</p>`;
+    return `<p class="db__empty-list">Create New Table</p>`;
   }
 
   return `
