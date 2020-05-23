@@ -1,3 +1,5 @@
+import 'element-closest-polyfill';
+
 class Dom {
   constructor(selector) {
     this.$el = typeof selector === 'string' ? 
