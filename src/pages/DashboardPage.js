@@ -11,7 +11,7 @@ export class DashboardPage extends Page {
       </div>
       <div class="db__new">
         <div class="db__view">
-          <a href="#excel${now}" class="db__create">
+          <a href="#excel/${now}" class="db__create">
             New <br> Table
           </a>
         </div>

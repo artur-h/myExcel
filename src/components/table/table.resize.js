@@ -20,20 +20,25 @@ export function resizeHandler($root, event) {
     });
 
     document.onmousemove = e => {
+      e.preventDefault();
+
       if (type === 'col') {
         const delta = e.pageX - coords.right;
         value = coords.width + delta;
         $resizer.css({right: -delta + 'px'});
+        document.body.style.cursor = 'ew-resize';
       } else {
         const delta = e.pageY - coords.bottom;
         value = coords.height + delta;
         $resizer.css({bottom: -delta + 'px'});
+        document.body.style.cursor = 'ns-resize';
       }
     };
 
     document.onmouseup = () => {
       document.onmousemove = null;
       document.onmouseup = null;
+      document.body.style.cursor = 'auto';
 
       if (type === 'col') {
         $parent.css({width: value + 'px'});
